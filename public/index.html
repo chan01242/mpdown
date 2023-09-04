@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <script src="/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/js/functions-min.js"></script>
+    <title>Video To MP3 Convert</title>
+  </head>
+ <body>
+
+<div class="perspective effect-rotate-left">
+    <div class="container"><div class="outer-nav--return"></div>
+        <div id="viewport" class="l-viewport">
+            <div class="l-wrapper">
+                <ul class="l-main-content main-content">
+                    <li class="l-section section section--is-active">
+                        <div class="intro" style="margin-top:-40px;">
+                            <div class="hire">
+                                <h2 id="paste">Paste to Video URL</h2>
+                                <div class="work-request--information">
+                                    <div class="information-name">
+                                        <input id="videoUrl" type="text" contenteditable="true" spellcheck="false">
+                                        <label for="videoUrl">URL</label>
+                                        <div style="margin-top:15px; display:flex; flex-wrap:wrap; flex-direction: row;  align-items: center; justify-content: center;">
+                                            <span style="font-size:20px; margin-right:10px;">Audio Quality : </span>
+                                            <select class="select" id="compRate">
+                                                <option value="64">64 kbit/s</option>
+                                                <option value="128" selected>128 kbit/s</option>
+                                                <option value="192">192 kbit/s</option>
+                                                <option value="256">256 kbit/s</option>
+                                                <option value="320">320 kbit/s</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-request" style="text-align: center; display: inline-block; margin-top:35px;">
+                                    <input type="submit" id="getmp3" class="" onclick="getMP3()" value="GET .MP3" style="font-size:21px; background-color: #E74B41; width:70%">
+                                    <input type="submit" onclick="clearInput()" value="CLEAR" style="font-size:21px; width:25%">
+
+                                </div>
+                                <h3 id="error" style="display: none;">ERROR: Invalid URL value!!</h3>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+window.onload = function() {
+	setTimeout(function(){
+	$("#videoUrl").val('')
+	},200);
+}
+
+function getMP3(){
+
+    if($("#getmp3").hasClass("blinking")){
+
+		 return;
+	 }
+
+     if($("#videoUrl").val().trim() == ""){
+		$("#paste").attr('class', 'blink');
+
+	}else{
+		$("#paste").attr('class', '');
+		$("#getmp3").attr("class", "blinking");
+
+		var videoKey = "";
+		var videoUrl = $("#videoUrl").val().trim();
+
+		var quality = '';
+		    quality = $("#compRate option:selected").val();
+
+		if(quality == '') quality = '128';
+
+		const settings = {
+            async: true,
+            crossDomain: true,
+            url: 'https://youtube-mp3-downloader2.p.rapidapi.com/ytmp3/ytmp3/custom/?url='+videoUrl+'&quality='+quality,
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '9395a1ce0emsh69d7787a065f805p1ad2b8jsnfd5609f1f163',
+					      'X-RapidAPI-Host': 'youtube-mp3-downloader2.p.rapidapi.com'
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+        	$("#getmp3").attr("class", "");
+          location.href = response.link;
+        })
+		.fail(function(data, textStatus, errorThrown){
+		    $("#getmp3").attr("class", "");
+            $("#error").show();
+        });
+
+	}
+
+}
+
+
+function clearInput(){
+	$("#paste").attr('class', '');
+	$("#videoUrl").val('');
+	$("#error").hide();
+}
+
+</script>
+
+
+
+</body>
+</html>
