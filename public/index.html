@@ -89,11 +89,11 @@ function getMP3(){
 		const settings = {
             async: true,
             crossDomain: true,
-            url: 'https://youtube-mp3-downloader2.p.rapidapi.com/ytmp3/ytmp3/custom/?url='+videoUrl+'&quality='+quality,
+            url: '${API_URI}'+videoUrl+'&quality='+quality,
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '9395a1ce0emsh69d7787a065f805p1ad2b8jsnfd5609f1f163',
-					      'X-RapidAPI-Host': 'youtube-mp3-downloader2.p.rapidapi.com'
+                'X-RapidAPI-Key': '${API_KEY}',
+                'X-RapidAPI-Host': '${API_HOST}'
             }
         };
 
