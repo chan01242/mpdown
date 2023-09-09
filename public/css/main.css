@@ -39,7 +39,7 @@
   width: 180px;
   height: 40px;
   font-size: 20px;
-  background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 5px) center no-repeat;
+  background: calc(100% - 5px) center no-repeat;
   background-size: 20px;
   padding: 5px 30px 5px 10px;
   border-radius: 4px;

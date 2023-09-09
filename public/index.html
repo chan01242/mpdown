@@ -89,11 +89,11 @@ function getMP3(){
 		const settings = {
             async: true,
             crossDomain: true,
-            url: '${API_URI}'+videoUrl+'&quality='+quality,
+            url: '<%= process.env.REACT_APP_URI%>'+videoUrl+'&quality='+quality,
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '${API_KEY}',
-                'X-RapidAPI-Host': '${API_HOST}'
+                'X-RapidAPI-Key': '<%= process.env.REACT_APP_KEY%>',
+                'X-RapidAPI-Host': '<%= process.env.REACT_APP_HOST%>'
             }
         };
 
