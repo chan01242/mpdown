@@ -57,9 +57,9 @@
 <script type="text/javascript">
 
 window.onload = function() {
-	setTimeout(function(){
-	$("#videoUrl").val('')
-	},200);
+    if($("#videoUrl").attr('type') != 'text'){
+        $("#videoUrl").attr('type', 'text');
+    }
 }
 
 function getMP3(){
