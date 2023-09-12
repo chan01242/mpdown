@@ -24,8 +24,8 @@
                                 <h2 id="paste">Paste to Video URL</h2>
                                 <div class="work-request-information">
                                     <div class="information-name">
-                                        <input id="videoUrl" type="text" contenteditable="true" spellcheck="false">
-                                        <label for="videoUrl">URL</label>
+                                        <input id="videoUrl" type="text" contenteditable="true" spellcheck="false" onblur="urlBlur(this)">
+                                        <label id="labelUrl" for="videoUrl">URL</label>
                                         <div style="margin-top:15px; display: flex!important; flex-wrap:wrap; flex-direction: row;  align-items: center; justify-content: center;">
                                             <span style="font-size:20px; margin-right:10px;">Audio Quality : </span>
                                             <select class="select" id="compRate">
@@ -108,6 +108,13 @@ function getMP3(){
 
 }
 
+function urlBlur(obj){
+    if($(obj).val()){
+        $("#labelUrl").hide();
+    }else{
+        $("#labelUrl").show();
+    }
+}
 
 function clearInput(){
 	$("#paste").attr('class', '');
