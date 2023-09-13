@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246138063017478"
+     crossorigin="anonymous"></script>
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/convt.ico">
@@ -61,52 +63,6 @@ window.onload = function() {
         $("#videoUrl").attr('type', 'text');
     }
 }
-
-// function getMP3(){
-
-//     if($("#getmp3").hasClass("blinking")){
-
-// 		 return;
-// 	 }
-
-//      if($("#videoUrl").val().trim() == ""){
-// 		$("#paste").attr('class', 'blink');
-
-// 	}else{
-// 		$("#paste").attr('class', '');
-// 		$("#getmp3").attr("class", "blinking");
-
-// 		var videoKey = "";
-// 		var videoUrl = $("#videoUrl").val().trim();
-
-// 		var quality = '';
-// 		    quality = $("#compRate option:selected").val();
-
-// 		if(quality == '') quality = '128';
-
-// 		const settings = {
-//             async: true,
-//             crossDomain: true,
-//             url: '<%= process.env.REACT_APP_URI%>'+videoUrl+'&quality='+quality,
-//             method: 'GET',
-//             headers: {
-//                 'X-RapidAPI-Key': '<%= process.env.REACT_APP_KEY%>',
-//                 'X-RapidAPI-Host': '<%= process.env.REACT_APP_HOST%>'
-//             }
-//         };
-
-//         $.ajax(settings).done(function (response) {
-//         	$("#getmp3").attr("class", "");
-//           location.href = response.link;
-//         })
-// 		.fail(function(data, textStatus, errorThrown){
-// 		    $("#getmp3").attr("class", "");
-//             $("#error").show();
-//         });
-
-// 	}
-
-// }
 
 function urlBlur(obj){
     if($(obj).val()){
