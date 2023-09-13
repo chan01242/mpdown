@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/convt.ico">
     <link rel="stylesheet" type="text/css" href="./css/main.css"/>
     <script src="./js/vendor/jquery-3.6.0.min.js"></script>
     <script src="./js/functions-min.js"></script>
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="work-request" style="text-align: center; display: inline-block; margin-top:35px;">
-                                    <input type="submit" id="getmp3" class="" onclick="getMP3()" value="GET .MP3" style="font-size:21px; background-color: #E74B41; width:70%">
+                                    <input type="submit" id="getmp3" class="" value="GET .MP3" style="font-size:21px; background-color: #E74B41; width:70%">
                                     <input type="submit" onclick="clearInput()" value="CLEAR" style="font-size:21px; width:25%">
 
                                 </div>
@@ -62,51 +62,51 @@ window.onload = function() {
     }
 }
 
-function getMP3(){
+// function getMP3(){
 
-    if($("#getmp3").hasClass("blinking")){
+//     if($("#getmp3").hasClass("blinking")){
 
-		 return;
-	 }
+// 		 return;
+// 	 }
 
-     if($("#videoUrl").val().trim() == ""){
-		$("#paste").attr('class', 'blink');
+//      if($("#videoUrl").val().trim() == ""){
+// 		$("#paste").attr('class', 'blink');
 
-	}else{
-		$("#paste").attr('class', '');
-		$("#getmp3").attr("class", "blinking");
+// 	}else{
+// 		$("#paste").attr('class', '');
+// 		$("#getmp3").attr("class", "blinking");
 
-		var videoKey = "";
-		var videoUrl = $("#videoUrl").val().trim();
+// 		var videoKey = "";
+// 		var videoUrl = $("#videoUrl").val().trim();
 
-		var quality = '';
-		    quality = $("#compRate option:selected").val();
+// 		var quality = '';
+// 		    quality = $("#compRate option:selected").val();
 
-		if(quality == '') quality = '128';
+// 		if(quality == '') quality = '128';
 
-		const settings = {
-            async: true,
-            crossDomain: true,
-            url: '<%= process.env.REACT_APP_URI%>'+videoUrl+'&quality='+quality,
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '<%= process.env.REACT_APP_KEY%>',
-                'X-RapidAPI-Host': '<%= process.env.REACT_APP_HOST%>'
-            }
-        };
+// 		const settings = {
+//             async: true,
+//             crossDomain: true,
+//             url: '<%= process.env.REACT_APP_URI%>'+videoUrl+'&quality='+quality,
+//             method: 'GET',
+//             headers: {
+//                 'X-RapidAPI-Key': '<%= process.env.REACT_APP_KEY%>',
+//                 'X-RapidAPI-Host': '<%= process.env.REACT_APP_HOST%>'
+//             }
+//         };
 
-        $.ajax(settings).done(function (response) {
-        	$("#getmp3").attr("class", "");
-          location.href = response.link;
-        })
-		.fail(function(data, textStatus, errorThrown){
-		    $("#getmp3").attr("class", "");
-            $("#error").show();
-        });
+//         $.ajax(settings).done(function (response) {
+//         	$("#getmp3").attr("class", "");
+//           location.href = response.link;
+//         })
+// 		.fail(function(data, textStatus, errorThrown){
+// 		    $("#getmp3").attr("class", "");
+//             $("#error").show();
+//         });
 
-	}
+// 	}
 
-}
+// }
 
 function urlBlur(obj){
     if($(obj).val()){
