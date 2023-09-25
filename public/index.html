@@ -50,11 +50,11 @@
                                     </div>
                                 </div>
                                 <div class="work-request" style="text-align: center; display: inline-block; margin-top:35px;">
-                                    <input type="submit" id="getmp3" class="" value="GET .MP3" style="font-size:18px; background-color: #E74B41; width:68%">
+                                    <input type="submit" id="getmp3" class="" onclick="valid(this)"value="GET .MP3" style="font-size:18px; background-color: #E74B41; width:68%">
                                     <input type="submit" onclick="clearInput()" value="CLEAR" style="font-size:18px; width:26%">
 
                                 </div>
-                                <h3 id="error" style="display: none;">ERROR: Invalid URL value!!</h3>
+                                <h3 id="error" style="display: none;">ERROR: Invalid URL or incorrect format!!</h3>
                             </div>
 
                         </div>
@@ -87,6 +87,22 @@ function clearInput(){
 	$("#error").hide();
 }
 
+function valid(obj){
+    var val = $("#videoUrl").val();
+    if(val){
+        if(val.indexOf("yout") == -1){
+            alert("Invalid URL!");
+            location.reload();
+        }else{
+            var timeout = setTimeout(function(){
+              if($("#getmp3").hasClass("blinking")){
+                    alert("No response from URL!");
+                    location.reload();
+                }
+            },10000);
+        }
+    }
+}
 </script>
 
 
