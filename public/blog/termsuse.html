@@ -15,9 +15,9 @@
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/convt.ico">
-    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
-    <script src="./js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="./js/functions-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <script src="../js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../js/functions-min.js"></script>
     <title>YouTube MP3 Converter</title>
     <meta name="title" content="YouTube MP3 Converter">
     <meta name="keywords" content="YouTube MP3 Converter, youtube to mp3, 유튜브 mp3변환, mp3 converter">
@@ -35,35 +35,13 @@
                     <li class="l-section section section--is-active">
                         <div class="intro" style="margin-top:-30px;">
                             <div class="hire">
-                                <h2 id="paste" style="font-size:29px;">Paste the YouTube URL</h2>
-                                <div class="work-request-information">
-                                    <div class="information-name">
-                                        <input id="videoUrl" type="text" contenteditable="true" spellcheck="false" onblur="urlBlur(this)">
-                                        <label id="labelUrl" for="videoUrl">URL</label>
-                                        <div style="margin-top:15px; display: flex!important; flex-wrap:wrap; flex-direction: row;  align-items: center; justify-content: center;">
-                                            <span style="font-size:18px; margin-right:10px;">Quality : </span>
-                                            <select class="select" id="compRate">
-                                                <option value="64">64 kbit/s</option>
-                                                <option value="128" selected>128 kbit/s</option>
-                                                <option value="192">192 kbit/s</option>
-                                                <option value="256">256 kbit/s</option>
-                                                <option value="320">320 kbit/s</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-request" style="text-align: center; display: inline-block; margin-top:35px;">
-                                    <input type="submit" id="getmp3" class="" onclick="valid(this)" value="GET .MP3" style="font-size:18px; background-color: #E74B41; width:68%">
-                                    <input type="submit" onclick="clearInput()" value="CLEAR" style="font-size:18px; width:26%">
-                                </div>
-                                <h3 id="error" style="display: none;">ERROR: Invalid URL or incorrect format!!</h3>
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100;">Q : How can I use it?<br>A : Read the explanation steps below and proceed</p>
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:16px; font-weight: 100; margin-top:20px;">step1 - Copy the URL of the video you want to convert<br>
                                                                                                              step2 - Paste the copied URL into the URL entry box of the current site<br>
                                                                                                              step3 - Choose audio quality. The default setting is 128 kbit/s<br>
                                                                                                              step4 - Click the [GET MP3] button in red at the bottom of the current site..</p>
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px;">If the URL is not valid, an alert is displayed. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:15px; font-weight: 100; margin-top:20px;"><a href="./blog/termsuse.html">Terms of Use</a>&nbsp;&nbsp;&nbsp; <a href="./blog/privacy.html">Privacy Policy</a></p>
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px;"><a>Terms of Use</a>&nbsp;&nbsp;&nbsp; <a>Privacy Policy</a></p>
                             </div>
                         </div>
                     </li>
