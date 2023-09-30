@@ -82,12 +82,10 @@ window.onload = function() {
     if(/Android|iPhone/i.test(navigator.userAgent)) {
        $(".device-notification--message").css("font-size", "12px");
     }
+    if(/Mobi/i.test(window.navigator.userAgent)) {
+       $(".device-notification--message").css("font-size", "12px");
+    }
 }
-
-$('body').on('scroll touchmove mousewheel', e=> {
-   e.preventDefault();
-   e.stopPropagation();
-});
 
 function urlBlur(obj){
     if($(obj).val()){

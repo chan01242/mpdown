@@ -13,8 +13,8 @@
      crossorigin="anonymous"></script>
     <meta name="theme-color" content="#000000">
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/convt.ico">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="shortcut icon" href="../convt.ico">
     <link rel="stylesheet" type="text/css" href="../css/main.css"/>
     <script src="../js/vendor/jquery-3.6.0.min.js"></script>
     <script src="../js/functions-min.js"></script>
@@ -28,20 +28,30 @@
  <body>
 
 <div class="perspective effect-rotate-left">
-    <div class="container"><div class="outer-nav--return"></div>
+    <div class="container">
         <div id="viewport" class="l-viewport">
             <div class="l-wrapper">
                 <ul class="l-main-content main-content">
                     <li class="l-section section section--is-active">
-                        <div class="intro" style="margin-top:-30px;">
-                            <div class="hire">
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100;">Q : How can I use it?<br>A : Read the explanation steps below and proceed</p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:16px; font-weight: 100; margin-top:20px;">step1 - Copy the URL of the video you want to convert<br>
-                                                                                                             step2 - Paste the copied URL into the URL entry box of the current site<br>
-                                                                                                             step3 - Choose audio quality. The default setting is 128 kbit/s<br>
-                                                                                                             step4 - Click the [GET MP3] button in red at the bottom of the current site..</p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px;">If the URL is not valid, an alert is displayed. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px;"><a>Terms of Use</a>&nbsp;&nbsp;&nbsp; <a>Privacy Policy</a></p>
+                        <div class="intro" style="overflow: auto">
+                            <div class="hire" id="hire">
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; text-align:left;">1. Introduction<br><br>
+                                                                                                                                       The use of our website is subject to the following terms and conditions of use, as amended from time to time (the “Terms”).<br>
+                                                                                                                                       The Terms are to be read together by you with any terms, conditions or disclaimers provided in the pages of our website.<br>
+                                                                                                                                       Please review the Terms carefully. The Terms apply to all users of our website, including without limitation, users who are browsers, customers, merchants, vendors and/or contributors of content.<br>
+                                                                                                                                       If you access and use this website, you accept and agree to be bound by and comply with the Terms and our Privacy Policy. If you do not agree to the Terms or our Privacy Policy, you are not authorized to access our website, use any of our website’s services or place an order on our website.
+                                                                                                                                    </p>
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:16px; font-weight: 100; margin-top:20px; text-align:left;">2. Use of our Website<br><br>
+                                                                                                             You agree to use our website for legitimate purposes and not for any illegal or unauthorized purpose, including without limitation, in violation of any intellectual property or privacy law<br>
+                                                                                                             By agreeing to the Terms, you represent and warrant that you are at least the age of majority in your state or province of residence and are legally capable of entering into a binding contract.<br>
+                                                                                                             You agree to not use our website to conduct any activity that would constitute a civil or criminal offence or violate any law.<br>
+                                                                                                             You agree not to attempt to interfere with our website’s network or security features or to gain unauthorized access to our systems.<br>
+                                                                                                            </p>
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; text-align:left;">3. General Conditions <br><br>We reserve the right to refuse service to anyone, at any time, for any reason.<br>
+                                                                                                            We reserve the right to make any modifications to the website, including terminating, changing, suspending or discontinuing any aspect of the website at any time, without notice<br>
+                                                                                                            We may impose additional rules or limits on the use of our website. You agree to review the Terms regularly and your continued access or use of our website will mean that you agree to any changes.<br>
+                                                                                                            You agree that we will not be liable to you or any third party for any modification, suspension or discontinuance of our website or for any service, content, feature or product offered through our website.</p>
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">go to main</a></p>
                             </div>
                         </div>
                     </li>
@@ -54,49 +64,18 @@
 <script type="text/javascript">
 
 window.onload = function() {
-    if($("#videoUrl").attr('type') != 'text'){
-        $("#videoUrl").attr('type', 'text');
-    }
+   
     if(/Android|iPhone/i.test(navigator.userAgent)) {
        $(".device-notification--message").css("font-size", "12px");
+       $("#hire").css("margin-top", "450px");
+    }
+    if(/Mobi/i.test(window.navigator.userAgent)) {
+       $(".device-notification--message").css("font-size", "12px");
+       $("#hire").css("margin-top", "450px");
     }
 }
 
-$('body').on('scroll touchmove mousewheel', e=> {
-   e.preventDefault();
-   e.stopPropagation();
-});
 
-function urlBlur(obj){
-    if($(obj).val()){
-        $("#labelUrl").hide();
-    }else{
-        $("#labelUrl").show();
-    }
-}
-
-function clearInput(){
-	$("#paste").attr('class', '');
-	$("#videoUrl").val('');
-	$("#error").hide();
-}
-
-function valid(obj){
-    var val = $("#videoUrl").val();
-    if(val){
-        if(val.indexOf("yout") == -1){
-            alert("Invalid URL!");
-            location.reload();
-        }else{
-            var timeout = setTimeout(function(){
-              if($("#getmp3").hasClass("blinking")){
-                    alert("No response from URL!");
-                    location.reload();
-                }
-            },10000);
-        }
-    }
-}
 </script>
 
 
