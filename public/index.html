@@ -38,7 +38,7 @@
                                 <h2 id="paste" style="font-size:29px;">Paste the YouTube URL</h2>
                                 <div class="work-request-information">
                                     <div class="information-name">
-                                        <input id="videoUrl" type="text" contenteditable="true" onfocus="onfocus();" spellcheck="false" onblur="urlBlur(this)">
+                                        <input id="videoUrl" type="text" contenteditable="true" spellcheck="false" onblur="urlBlur(this)">
                                         <label id="labelUrl" for="videoUrl">URL</label>
                                         <div style="margin-top:15px; display: flex!important; flex-wrap:wrap; flex-direction: row;  align-items: center; justify-content: center;">
                                             <span style="font-size:18px; margin-right:10px;">Quality : </span>
@@ -85,6 +85,22 @@ window.onload = function() {
     }
 }
 
+$('#videoUrl').on('focusin', function() {
+     if(/Android|iPhone/i.test(navigator.userAgent)) {
+         $("#intro").css("margin-top", "150px");
+     }
+});
+
+
+$('#videoUrl').on('focusout', function() {
+     if(/Android|iPhone/i.test(navigator.userAgent)) {
+        if( $("#intro").css("margin-top") == '150px' ){
+            $("#intro").css("margin-top", "10px");
+        }
+     }
+});
+
+
 function urlBlur(obj){
     if($(obj).val()){
         $("#labelUrl").hide();
@@ -93,11 +109,6 @@ function urlBlur(obj){
     }
 }
 
-function onfocus(){
-     if(/Android|iPhone/i.test(navigator.userAgent)) {
-         $("#intro").css("margin-top", "300px");
-     }
-}
 
 function clearInput(){
 	$("#paste").attr('class', '');
