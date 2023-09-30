@@ -62,7 +62,7 @@
                                                                                                              step2 - Paste the copied URL into the URL entry box of the current site<br>
                                                                                                              step3 - Choose audio quality. The default setting is 128 kbit/s<br>
                                                                                                              step4 - Click the [GET MP3] button in red at the bottom of the current site..</p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px;">If the URL is not valid, an alert is displayed. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p>
+                                <p id="notice" class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px;">If the URL is not valid, an alert is displayed. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p>
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:15px; font-weight: 100; margin-top:20px;"><a href="./blog/termsuse.html">Terms of Use</a>&nbsp;&nbsp;&nbsp; <a href="./blog/privacy.html">Privacy Policy</a></p>
                             </div>
                         </div>
@@ -82,23 +82,24 @@ window.onload = function() {
     if(/Android|iPhone/i.test(navigator.userAgent)) {
        $(".device-notification--message").css("font-size", "12px");
        $("#intro").css("margin-top", "10px");
+       $("#notice").hide();
     }
 }
 
-$('#videoUrl').on('focusin', function() {
-     if(/Android|iPhone/i.test(navigator.userAgent)) {
-         $("#intro").css("margin-top", "150px");
-     }
-});
+// $('#videoUrl').on('focusin', function() {
+//      if(/Android|iPhone/i.test(navigator.userAgent)) {
+//          $("#intro").css("margin-top", "150px");
+//      }
+// });
 
 
-$('#videoUrl').on('focusout', function() {
-     if(/Android|iPhone/i.test(navigator.userAgent)) {
-        if( $("#intro").css("margin-top") == '150px' ){
-            $("#intro").css("margin-top", "10px");
-        }
-     }
-});
+// $('#videoUrl').on('focusout', function() {
+//      if(/Android|iPhone/i.test(navigator.userAgent)) {
+//         if( $("#intro").css("margin-top") == '150px' ){
+//             $("#intro").css("margin-top", "10px");
+//         }
+//      }
+// });
 
 
 function urlBlur(obj){
