@@ -79,27 +79,12 @@ window.onload = function() {
     if($("#videoUrl").attr('type') != 'text'){
         $("#videoUrl").attr('type', 'text');
     }
-    // if(/Android|iPhone/i.test(navigator.userAgent)) {
+    if(/Android|iPhone/i.test(navigator.userAgent)) {
        $(".device-notification--message").css("font-size", "12px");
        $("#intro").css("margin-top", "10px");
        $("#notice").hide();
-    // }
+    }
 }
-
-// $('#videoUrl').on('focusin', function() {
-//      if(/Android|iPhone/i.test(navigator.userAgent)) {
-//          $("#intro").css("margin-top", "150px");
-//      }
-// });
-
-
-// $('#videoUrl').on('focusout', function() {
-//      if(/Android|iPhone/i.test(navigator.userAgent)) {
-//         if( $("#intro").css("margin-top") == '150px' ){
-//             $("#intro").css("margin-top", "10px");
-//         }
-//      }
-// });
 
 
 function urlBlur(obj){
