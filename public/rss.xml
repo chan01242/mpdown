@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="http://yoursite.com/feed.xml" rel="self" type="application/rss+xml" />
+    <title>YouTube MP3 Converter</title>
+    <link>https://audioconv.netlify.app</link>
+    <description>get MP3 file download for youtube URL</description>
+    <language>en-us</language>    
+    <item>
+      <title>Terms of Use</title>
+      <pubDate>Mon, 6 Sep 2023 12:40:21 GMT</pubDate>
+      <link>https://audioconv.netlify.app/blog/termsuse.html</link>
+      <guid>https://audioconv.netlify.app/blog/termsuse.html</guid>
+      <description>Terms of Use</description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <pubDate>Mon, 6 Sep 2023 12:40:21 GMT</pubDate>
+      <link>https://audioconv.netlify.app/blog/privacy.html</link>
+      <guid>https://audioconv.netlify.app/blog/privacy.html</guid>
+      <description>Privacy Policy</description>
+    </item>
+    <item>
+      <title>sitemap</title>
+      <pubDate>Mon, 6 Sep 2023 12:40:21 GMT</pubDate>
+      <link>https://audioconv.netlify.app/sitemap.xml</link>
+      <guid>https://audioconv.netlify.app/sitemap.xml</guid>
+      <description>sitemap</description>
+    </item>
+  </channel>
+</rss>
