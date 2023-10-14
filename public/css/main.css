@@ -174,8 +174,8 @@ header nav ul a {
   font-weight: 400;
 }
  
-header nav > ul.on > a,
-header nav > ul:hover > a {
+header nav > ul > li:on > a,
+header nav > ul > li:hover > a {
   font-weight: bold;
   color: #fff;
   background: #37507e;
