@@ -29,8 +29,29 @@
 <body>
 
 <div class="perspective effect-rotate-left">
-    <div class="container"><div class="outer-nav--return"></div>
+    <div class="container">
         <div id="viewport" class="l-viewport">
+       	   <div class="header_wrap">
+			  <header>
+			    <img src="../convt.png" alt="logo" width="50px" height="40px">
+			    <h1 id="headH1" >&nbsp;YouTube To MP3 Converter</h1>
+			    <nav>
+			      <ul>
+			        <li>
+			          <a href="/">Home</a>
+			        </li>
+			        <li>
+			          <a href="./blog/faq.html">FAQ</a>
+			          <ul class="depth_2">
+			            <li><a href="./blog/faq.html">FAQ</a></li>
+			            <li><a href="./blog/termsuse.html">Terms of Use</a></li>
+			            <li><a href="./blog/privacy.html">Privacy Policy</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			    </nav>
+			  </header>
+			</div>
             <div class="l-wrapper">
                 <ul class="l-main-content main-content">
                     <li class="l-section section section--is-active">
@@ -84,6 +105,7 @@ window.onload = function() {
        $(".device-notification--message").css("font-size", "12px");
        $("#intro").css("margin-top", "10px");
        $("#notice").hide();
+       $("#headH1").hide();
     }
 }
 

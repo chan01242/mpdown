@@ -7,6 +7,13 @@
     <description>get MP3 file download for youtube URL</description>
     <language>en-us</language>    
     <item>
+      <title>FAQ</title>
+      <pubDate>Mon, 6 Sep 2023 12:40:21 GMT</pubDate>
+      <link>https://audioconv.netlify.app/blog/faq.html</link>
+      <guid>https://audioconv.netlify.app/blog/faq.html</guid>
+      <description>FAQ</description>
+    </item>
+    <item>
       <title>Terms of Use</title>
       <pubDate>Mon, 6 Sep 2023 12:40:21 GMT</pubDate>
       <link>https://audioconv.netlify.app/blog/termsuse.html</link>

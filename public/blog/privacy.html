@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta property="og:title" content="YouTube MP3 Converter">
-    <meta property="og:image" content="%PUBLIC_URL%/thumb.jpg">
+    <meta property="og:image" content="../thumb.jpg">
     <meta property="og:description" content="get MP3 file download for youtube URL">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://audioconv.netlify.app/">
@@ -30,12 +30,33 @@
 <div class="perspective effect-rotate-left">
     <div class="container">
         <div id="viewport" class="l-viewport">
+        <div class="header_wrap">
+			  <header>
+			    <img src="../convt.png" alt="logo" width="50px" height="40px">
+			    <h1 id="headH1" >&nbsp;YouTube To MP3 Converter</h1>
+			    <nav>
+			      <ul>
+			        <li>
+			          <a href="/">Home</a>
+			        </li>
+			        <li>
+			          <a href="../blog/faq.html">FAQ</a>
+			          <ul class="depth_2">
+			            <li><a href="../blog/faq.html">FAQ</a></li>
+			            <li><a href="../blog/termsuse.html">Terms of Use</a></li>
+			            <li><a href="../blog/privacy.html">Privacy Policy</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			    </nav>
+			  </header>
+			</div>
             <div class="l-wrapper">
                 <ul class="l-main-content main-content">
                     <li class="l-section section section--is-active">
                         <div class="intro" style="overflow: auto">
                             <div class="hire" id="hire">
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; text-align:left;">1. Introduction<br><br>
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; text-align:left;">1. Introduction [ Privacy Policy ]<br><br>
                                                                                                                                        We are committed to maintaining the accuracy, confidentiality, and security of your personally identifiable information ("Personal Information").<br>
                                                                                                                                        We are responsible for maintaining and protecting the Personal Information under our control.<br>
                                                                                                                                        We have designated an individual or individuals who is/are responsible for compliance with our privacy policy.<br>
@@ -84,6 +105,8 @@ window.onload = function() {
 
     if(/Android|iPhone/i.test(navigator.userAgent)) {
        $(".device-notification--message").css("font-size", "12px");
+       $("#hire").css("margin-top", "700px");
+       $("#headH1").hide();
     }
 }
 
