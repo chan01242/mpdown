@@ -97,16 +97,14 @@
 
 <script type="text/javascript">
 
-window.onload = function() {
-    if($("#videoUrl").attr('type') != 'text'){
-        $("#videoUrl").attr('type', 'text');
-    }
-    if(/Android|iPhone/i.test(navigator.userAgent)) {
-       $(".device-notification--message").css("font-size", "12px");
-       $("#intro").css("margin-top", "-10px");
-       $("#notice").hide();
-       $("#headH1").hide();
-    }
+if($("#videoUrl").attr('type') != 'text'){
+    $("#videoUrl").attr('type', 'text');
+}
+if(/Android|iPhone/i.test(navigator.userAgent)) {
+   $(".device-notification--message").css("font-size", "12px");
+   $("#intro").css("margin-top", "-10px");
+   $("#notice").hide();
+   $("#headH1").hide();
 }
 
 
