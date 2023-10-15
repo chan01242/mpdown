@@ -84,15 +84,18 @@
 
 <script type="text/javascript">
 
+if(/Android|iPhone/i.test(navigator.userAgent)) {
+    $(".device-notification--message").css("font-size", "12px");
+    $("#hire").css("margin-top", "450px");
+    $("#headH1").hide();
+ }else{
+    $("#hire").css("margin-top", "250px"); 
+ }
+ 
+
 window.onload = function() {
    
-    if(/Android|iPhone/i.test(navigator.userAgent)) {
-       $(".device-notification--message").css("font-size", "12px");
-       $("#hire").css("margin-top", "450px");
-       $("#headH1").hide();
-    }else{
-       $("#hire").css("margin-top", "250px"); 
-    }
+    
 }
 
 

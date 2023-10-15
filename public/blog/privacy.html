@@ -99,14 +99,16 @@
 
 <script type="text/javascript">
 
+$("#hire").css("margin-top", "750px");
+
+if(/Android|iPhone/i.test(navigator.userAgent)) {
+   $(".device-notification--message").css("font-size", "12px");
+   $("#headH1").hide();
+}
+
 window.onload = function() {
     
-    $("#hire").css("margin-top", "750px");
-
-    if(/Android|iPhone/i.test(navigator.userAgent)) {
-       $(".device-notification--message").css("font-size", "12px");
-       $("#headH1").hide();
-    }
+  
 }
 
 
