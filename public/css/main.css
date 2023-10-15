@@ -136,7 +136,16 @@ table {
 }
 
 a:link {
+  color : #ffffff;
+  font-weight: 600;
+}
+a:visited {
+  color : #ffffff;
+  font-weight: 600;
+}
+a:hover {
   color : #0f33ff;
+  font-weight: 600;
 }
 
 .header_wrap {
