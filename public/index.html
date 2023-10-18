@@ -27,7 +27,9 @@
     <meta name="naver-site-verification" content="60722804024f04456be50fd785c735e13f4471e8" />
   </head>
 <body>
-
+    <div class="box" id="loadBox" style="display:none;">
+      <div class="loader2"></div>
+    </div>
 <div class="perspective effect-rotate-left">
     <div class="container">
         <div id="viewport" class="l-viewport">
@@ -95,6 +97,8 @@
     </div>
 </div>
 
+
+
 <script type="text/javascript">
 
 if($("#videoUrl").attr('type') != 'text'){
@@ -124,8 +128,14 @@ function clearInput(){
 }
 
 function valid(obj){
+	
     var val = $("#videoUrl").val();
     if(val){
+    	
+    	if(!/Android|iPhone/i.test(navigator.userAgent)) {
+    		$("#loadBox").show();	
+    	}
+    	
         if(val.indexOf("yout") == -1){
             alert("Invalid URL!");
             location.reload();
