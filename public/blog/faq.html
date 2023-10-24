@@ -60,11 +60,21 @@
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:17px; text-align:left; font-weight: 100;">Q : How can I use it?<br>A : Read the explanation steps below and proceed</p>
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:20px; ">step1 - Copy the URL of the video you want to convert<br>
                                                                                                              step2 - Paste the copied URL into the URL box this site<br>
-                                                                                                             step3 - Choose audio quality. default setting is 128kbit/s<br>
+                                                                                                             step3 - Choose audio quality bitrate. default setting is 128kbit/s<br>
                                                                                                              step4 - Click the [GET MP3] button in red at the bottom of the current site..</p>
-                                <p id="notice" class="device-notification--message draggable" style="width: 100%; text-align:left; font-size:17px; font-weight: 100; margin-top:20px;">If the URL is not valid, an alert is displayed. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p>
-                                                                                                            
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">go to main</a></p>
+                                <p id="notice" class="device-notification--message draggable" style="width: 100%; text-align:left; font-size:17px; font-weight: 100; margin-top:20px;">If the URL is not valid, an alert is displayed. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p> <br>
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; text-align:left;">2. What is audio bitrate?<br></p>
+                                	<p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:20px; ">The amount of bits (audio data) handled in a specific amount of time is known as the audio bitrate. It is commonly used to specify a file's audio quality and is expressed in kilobits per second (kbps). <br>
+                                	Superior audio quality is usually associated with a larger bitrate. But it also results in larger-sized files and higher bandwidth requirements.
+									The technological process of converting sounds and images into data so they can be played on digital devices involves a lot of work behind the scenes.
+									For instance, high-end streaming services usually employ a bitrate of 128 kbps (kilobits per second). 
+									Even with weaker internet connections, it guarantees a smooth streaming experience and offers respectable audio quality while consuming little bandwidth. <br>
+									A smaller bitrate, on the other hand, indicates that we are representing the audio with fewer data, which will result in a higher information loss and lower audio quality. <br>
+									How come? because comparable frequency ranges, subtleties, and other audio characteristics cannot be captured by a smaller bitrate. <br>
+									As a result, a reduced bitrate may result in audible distortions and artifacts; data and frequency loss during compression will cause a decrease in clarity. <br>
+									The ideal bitrate for audio depends on the particular use case, the kind of audio, and the network setup of your audience. For example, you may require a higher bitrate to produce audio for high-end systems. However, because internet speeds might vary, a smaller bitrate is more suited for streaming content online. <br>
+                                     </p>          
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">go to main</a></p><br>
                             </div>
                         </div>
                     </li>
@@ -77,12 +87,13 @@
 <script type="text/javascript">
 
     
-	$("#hire").css("margin-top", "-250px");
-	
-    if(/Android|iPhone/i.test(navigator.userAgent)) {
-       $(".device-notification--message").css("font-size", "12px");
-       $("#headH1").hide();
-    }
+if(/Android|iPhone/i.test(navigator.userAgent)) {
+    $(".device-notification--message").css("font-size", "12px");
+    $("#hire").css("margin-top", "450px");
+    $("#headH1").hide();
+ }else{
+    $("#hire").css("margin-top", "250px"); 
+ }
 
 
 </script>
