@@ -47,20 +47,34 @@
 			    </nav>
 			  </header>
 			</div>
-            <div class="l-wrapper">
-                <ul class="l-main-content main-content">
-                    <li class="l-section section section--is-active">
-                        <div class="intro" style="overflow: auto">
-                            <div class="hire" id="hire">
-                            <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; text-align:left;">1. Introduction [ FAQ ]<br></p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; text-align:left; font-weight: 100;">Q: How can I use it?<br>A: Read the explanation steps below and proceed.</p>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:20px; ">Step1 - Copy the URL of the video you wish to convert.<br>
+            <div class="l-wrapper" style="overflow: auto;">
+               <ul id="qna" class="qna">
+		            <li>
+		                <input type="checkbox" id="qna-1">
+		                <label for="qna-1">How can I use it?</label>
+		                <div>
+		                    <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:10px; ">Step1 - Copy the URL of the video you wish to convert.<br>
                                                                                                              Step2 - Paste the copied URL into the URL box this site<br>
                                                                                                              Step3 - Choose audio quality bitrate. default setting is 128kbit/s<br>
                                                                                                              Step4 - Click the [GET MP3] button in red at the bottom of the current site.</p>
-                                <p id="notice" class="device-notification--message draggable" style="width: 100%; text-align:left; font-size:17px; font-weight: 100; margin-top:20px;">An alert will be displayed if the URL is not valid. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p> <br>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; text-align:left;">2. What is audio bitrate?<br></p>
-                                	<p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:20px; ">The amount of bits (audio data) handled in a specific amount of time is known as the audio bitrate. It is commonly used to specify a file's audio quality and is expressed in kilobits per second (kbps). <br>
+                            <p id="notice" class="device-notification--message draggable" style="width: 100%; text-align:left; font-size:17px; font-weight: 100; margin-top:10px;">An alert will be displayed if the URL is not valid. <br>In that case, please check the URL information.<br>You cannot share the mp3 you received.</p>
+		                </div>
+		            </li>
+		            <li>
+		                <input type="checkbox" id="qna-2">
+		                <label for="qna-2">No response after request.</label>
+		                <div>
+		                <p id="notice" class="device-notification--message draggable" style="width: 100%; text-align:left; font-size:17px; font-weight: 100; margin-top:10px;">It's one of the reasons below.</p>
+		                    <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:10px; ">1. If the file in the video is too large.<br>
+                                                                                                             2. If there is a lot of traffic on our site(please try later)<br>
+                                                                                                             3. Fault in the address itself of the link.<br></p>
+		                </div>
+		            </li>
+		            <li>
+		                <input type="checkbox" id="qna-5">
+		                <label for="qna-5">What is audio bitrate?</label>
+		                <div>
+		                    <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:10px; ">The amount of bits (audio data) handled in a specific amount of time is known as the audio bitrate. It is commonly used to specify a file's audio quality and is expressed in kilobits per second (kbps). <br>
                                 	Superior audio quality is usually associated with a larger bitrate. But it also results in larger-sized files and higher bandwidth requirements.
 									The technological process of converting sounds and images into data so they can be played on digital devices involves a lot of work behind the scenes.
 									For instance, high-end streaming services usually employ a bitrate of 128 kbps (kilobits per second). 
@@ -69,12 +83,13 @@
 									How come? because comparable frequency ranges, subtleties, and other audio characteristics cannot be captured by a smaller bitrate. <br>
 									As a result, a reduced bitrate may result in audible distortions and artifacts; data and frequency loss during compression will cause a decrease in clarity. <br>
 									The ideal bitrate for audio depends on the particular use case, the kind of audio, and the network setup of your audience. For example, you may require a higher bitrate to produce audio for high-end systems. However, because internet speeds might vary, a smaller bitrate is more suited for streaming content online. <br>
-                                     </p>          
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">go to main</a></p><br>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                             </p>          
+		                </div>
+		            </li>
+		            <li>
+		            	<p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">go to main</a></p><br>
+		            </li>
+		        </ul>
             </div>
         </div>
     </div>
@@ -86,6 +101,7 @@
 if(/Android|iPhone/i.test(navigator.userAgent)) {
     $(".device-notification--message").css("font-size", "12px");
     $("#hire").css("margin-top", "450px");
+    $("#qna").css("width", "90%");
     $("#headH1").hide();
  }else{
     $("#hire").css("margin-top", "250px"); 
