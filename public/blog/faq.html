@@ -71,6 +71,20 @@
 		                </div>
 		            </li>
 		            <li>
+		                <input type="checkbox" id="qna-3">
+		                <label for="qna-3">Supported formats.</label>
+		                <div>
+	                    <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:10px; ">Currently, there is only one mp3 format.</p>
+		                </div>
+		            </li>
+		            <li>
+		                <input type="checkbox" id="qna-4">
+		                <label for="qna-4">Can I convert using smartphone?</label>
+		                <div>
+	                    <p class="device-notification--message draggable" style="width: 100%; font-size:16px; text-align:left; font-weight: 100; margin-top:10px; ">Depending on whether your device uses Android, you can of course convert the video and download it directly to your tablet or smartphone.</p>
+		                </div>
+		            </li>
+		            <li>
 		                <input type="checkbox" id="qna-5">
 		                <label for="qna-5">What is audio bitrate?</label>
 		                <div>
@@ -87,7 +101,7 @@
 		                </div>
 		            </li>
 		            <li>
-		            	<p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">go to main</a></p><br>
+		            	<p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100; margin-top:20px; padding-bottom:60px; text-align:left;"><a href="/">Go to main</a></p><br>
 		            </li>
 		        </ul>
             </div>
@@ -101,7 +115,7 @@
 if(/Android|iPhone/i.test(navigator.userAgent)) {
     $(".device-notification--message").css("font-size", "12px");
     $("#hire").css("margin-top", "450px");
-    $("#qna").css("width", "90%");
+    $("#qna").css("width", "95%");
     $("#headH1").hide();
  }else{
     $("#hire").css("margin-top", "250px"); 
