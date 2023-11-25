@@ -429,6 +429,13 @@ header nav ul.depth_2 li:hover > a {
 }
 
 
-
-
+.content1{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
 

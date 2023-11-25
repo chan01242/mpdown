@@ -54,9 +54,6 @@
                     <li class="l-section section section--is-active">
                         <div class="intro" id="intro" style="margin-top:-30px; overflow: auto">
                             <div class="hire">
-	                            <div style="text-align: center;">
-	                            	<img src="../convt.png" alt="Converter Logo" width="80px" height="70px">
-	                            </div>
                                 <h2 id="paste" style="font-size:26px;">Paste the YouTube URL</h2>
                                 <div class="work-request-information">
                                     <div class="information-name">
@@ -79,7 +76,15 @@
                                     <input type="submit" onclick="clearInput()" value="CLEAR" style="font-size:18px; width:26%">
                                 </div>
                                 <h3 id="error" style="display: none;">ERROR: Invalid URL or incorrect format!!</h3>
-                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100;">Q: How can I use it?<br>A: Read the explanation steps below and proceed.</p>
+                                
+                                <p class="device-notification--message draggable" style="width: 100%; font-size:17px; font-weight: 100;">Q: How can I use it?<br>A: Read the explanation steps below and proceed.</p><br/>
+                                 <section class="content1">
+								  <div class="flexbox">
+								    <div class="item2"><img class="thumb" src="../step1.png" alt="step1" width="140px" height="120px" style="filter:grayscale(45%)"></div>
+								    <div class="item2"><img class="thumb" src="../step2.png" alt="step2" width="140px" height="120px" style="filter:grayscale(45%)"></div>
+								    <div class="item2"><img class="thumb" src="../step3.png" alt="step3" width="140px" height="120px" style="filter:grayscale(45%)"></div>
+								  </div>
+								</section>
                                 <p class="device-notification--message draggable" style="width: 100%; font-size:16px; font-weight: 100; margin-top:20px; ">Step1 - Copy the URL of the video you wish to convert.<br>
                                                                                                              Step2 - Paste the copied URL into the URL box this site<br>
                                                                                                              Step3 - Choose audio quality. default setting is 128kbit/s<br>
@@ -108,6 +113,8 @@ if(/Android|iPhone/i.test(navigator.userAgent)) {
    $("#notice").hide();
    $("#headH1").hide();
    $("header nav > ul li ").css("width", "100px");
+   $(".item2 > img").attr("width", "90px");
+   $(".item2 > img").attr("height", "80px");
 }
 
 
