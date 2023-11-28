@@ -98,6 +98,25 @@
             </div>
         </div>
     </div>
+            <div class="footer__menu">
+                <div style="margin-right: -25px;">
+                    <ul>
+                        <li><a href="./blog/faq.html">FAQ</a></li>
+                        <li><a href="./blog/aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div style="margin-left: -25px;">
+                    <ul>
+                        <li><a href="javascript:shareTwitter();">Twitter</a></li>
+                        <li><a href="javascript:shareFacebook();">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                2023 Chanhyeong DEV site Portfolio <br>
+                All Right Reserved
+            </div>
+
 </div>
 
 
@@ -155,6 +174,20 @@ function valid(obj){
         }
     }
 }
+
+function shareTwitter() {
+    var sendText = "Youtube MP33 Converter";
+    var sendUrl = "https://audioconv.netlify.app/"; 
+    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+}
+
+function shareFacebook() {
+    var sendUrl = "https://audioconv.netlify.app/";
+    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+}
+
+
+
 </script>
 
 

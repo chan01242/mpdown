@@ -439,3 +439,33 @@ header nav ul.depth_2 li:hover > a {
     gap: 1em;
 }
 
+
+
+.footer__menu {
+    display: flex;
+    width:100%;
+    text-align: center;
+}
+.footer__menu > div {
+    margin: auto;
+    width: 350px;
+    height: 100px;
+    padding-top: 45px;
+}
+.footer__menu > div li {
+    font-size: 14px;
+    padding-top: 5px;
+}
+.footer__menu > div li a{
+    color: #fff;
+}
+.footer__right{
+    border-top: 1px solid #d9d9d9;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    text-align: center;
+    font-style: normal;
+    line-height: 1.6em;
+    color: #666;
+    font-size: 14px;
+}
