@@ -54,7 +54,7 @@
                     <li class="l-section section section--is-active">
                         <div class="intro" id="intro" style="margin-top:-30px; overflow: auto">
                             <div class="hire">
-                                <h2 id="paste" style="font-size:26px;">Paste the YouTube URL</h2>
+                                <h2 id="paste" style="font-size:24px;">Paste the YouTube URL</h2>
                                 <div class="work-request-information">
                                     <div class="information-name">
                                         <input id="videoUrl" type="text" contenteditable="true" spellcheck="false" onblur="urlBlur(this)">
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="footer__right">
-                2023 Chanhyeong DEV site Portfolio <br>
+                2023 ChanHyeong DEV Site<br>
                 All Right Reserved
             </div>
 
@@ -128,6 +128,7 @@ if($("#videoUrl").attr('type') != 'text'){
 }
 if(/Android|iPhone/i.test(navigator.userAgent)) {
    $(".device-notification--message").css("font-size", "12px");
+   $("#paste").css("font-size", "22px");
    $("#intro").css("margin-top", "-10px");
    $("#notice").hide();
    $("#headH1").hide();
